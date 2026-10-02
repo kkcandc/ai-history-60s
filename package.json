@@ -1,0 +1,45 @@
+{
+  "name": "ai-history-60s",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A 60-second mute-friendly history of AI, from Dartmouth to agents. Built with Remotion.",
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "player": "vite --config web/vite.config.ts",
+    "audio": "node --experimental-strip-types scripts/score.ts",
+    "postinstall": "node --experimental-strip-types scripts/score.ts",
+    "render": "npm run audio && remotion render HistoryOfAI out/history-of-ai.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p",
+    "render:preview": "remotion render HistoryOfAI out/history-of-ai-preview.mp4 --codec=h264 --crf=23 --scale=0.5 --pixel-format=yuv420p",
+    "still": "remotion still HistoryOfAI",
+    "stills": "node --experimental-strip-types scripts/stills.ts",
+    "test": "node --experimental-strip-types scripts/verify-timeline.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkcandc/ai-history-60s.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkcandc/ai-history-60s/issues"
+  },
+  "homepage": "https://github.com/kkcandc/ai-history-60s#readme",
+  "dependencies": {
+    "@remotion/cli": "^4.0.532",
+    "@remotion/google-fonts": "^4.0.532",
+    "@remotion/player": "^4.0.532",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.532"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "5.7",
+    "vite": "^6.4.3"
+  }
+}
