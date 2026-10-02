@@ -2,6 +2,9 @@
   "name": "ai-history-60s",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "description": "A 60-second mute-friendly history of AI, from Dartmouth to agents. Built with Remotion.",
   "type": "module",
   "scripts": {

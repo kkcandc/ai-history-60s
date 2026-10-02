@@ -2,6 +2,7 @@ node_modules/
 dist/
 out/
 web/dist/
+dist/
 .remotion/
 *.log
 .DS_Store

@@ -22,6 +22,8 @@ npm run player
 
 Then open the URL Vite prints (port 5173).
 
+The same player is the Vercel production site. The build is `vite build` only. It does not render the MP4. `main` is ignored so an empty default branch cannot replace production.
+
 ## Export
 
 ```bash
